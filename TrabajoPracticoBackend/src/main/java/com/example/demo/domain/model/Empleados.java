@@ -13,4 +13,16 @@ public class Empleados {
     @OneToOne
     private Pruebas pruebas;
 
+    public Empleados(String apellido, Integer legajo, String nombre, Pruebas pruebas, Integer telefono_contacto) {
+        this.apellido = apellido;
+        this.legajo = legajo;
+        this.nombre = nombre;
+        this.pruebas = pruebas;
+        this.telefono_contacto = telefono_contacto;
+    }
+
+
+    public Empleados() {
+        super();
+    }
 }

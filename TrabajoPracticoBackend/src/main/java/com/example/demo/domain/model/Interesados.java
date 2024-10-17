@@ -17,4 +17,19 @@ public class Interesados {
     private String fecha_vencimiento;
     @OneToMany(mappedBy = "interesados")
     private Set<Pruebas> pruebas;
+
+    public Interesados(String apellido, String fecha_vencimiento, Integer id, String nombre, Integer nro_licencia, Set<Pruebas> pruebas, Integer restringido, Integer tipo_documento) {
+        this.apellido = apellido;
+        this.fecha_vencimiento = fecha_vencimiento;
+        this.id = id;
+        this.nombre = nombre;
+        this.nro_licencia = nro_licencia;
+        this.pruebas = pruebas;
+        this.restringido = restringido;
+        this.tipo_documento = tipo_documento;
+    }
+
+    public Interesados() {
+        super();
+    }
 }

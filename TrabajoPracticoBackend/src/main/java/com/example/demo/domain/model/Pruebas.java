@@ -23,4 +23,18 @@ public class Pruebas {
     //Prueba
     @OneToOne
     private Vehiculos id_vehiculo;
+
+    public Pruebas(String comentarios, Empleados empleados, String fecha_hora_inicio, String fehca_hora_fin, Integer id, Vehiculos id_vehiculo, Interesados interesados) {
+        this.comentarios = comentarios;
+        this.empleados = empleados;
+        this.fecha_hora_inicio = fecha_hora_inicio;
+        this.fehca_hora_fin = fehca_hora_fin;
+        this.id = id;
+        this.id_vehiculo = id_vehiculo;
+        this.interesados = interesados;
+    }
+
+    public Pruebas() {
+        super();
+    }
 }

@@ -13,4 +13,16 @@ public class Posiciones {
 
     @OneToOne
     private Vehiculos id_vehiculo;
+
+    public Posiciones(String fecha_hora, Integer id, Vehiculos id_vehiculo, Integer latitud, Integer longitud) {
+        this.fecha_hora = fecha_hora;
+        this.id = id;
+        this.id_vehiculo = id_vehiculo;
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
+
+    public Posiciones() {
+        super();
+    }
 }

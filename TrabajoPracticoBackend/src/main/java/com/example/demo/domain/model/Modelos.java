@@ -12,4 +12,14 @@ public class Modelos {
     @ManyToOne(cascade = CascadeType.ALL)
     private Marcas id_marca;
 
+
+    public Modelos(String descripcion, Integer id, Marcas id_marca) {
+        this.descripcion = descripcion;
+        this.id = id;
+        this.id_marca = id_marca;
+    }
+
+    public Modelos() {
+
+    }
 }
