@@ -2,6 +2,8 @@ package com.example.demo.domain.model;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Empleados {
     @Id
@@ -9,18 +11,56 @@ public class Empleados {
     private Integer legajo;
     private String nombre;
     private String apellido;
-    private Integer telefono_contacto;
-    @OneToOne
-    private Pruebas pruebas;
+    private Long telefono_contacto;
 
-    public Empleados(String apellido, Integer legajo, String nombre, Pruebas pruebas, Integer telefono_contacto) {
-        this.apellido = apellido;
-        this.legajo = legajo;
-        this.nombre = nombre;
-        this.pruebas = pruebas;
+    public Long getTelefono_contacto() {
+        return telefono_contacto;
+    }
+
+    public void setTelefono_contacto(Long telefono_contacto) {
         this.telefono_contacto = telefono_contacto;
     }
 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getLegajo() {
+        return legajo;
+    }
+
+    public void setLegajo(Integer legajo) {
+        this.legajo = legajo;
+    }
+
+    public Empleados(String apellido, Integer legajo, String nombre, List<Pruebas> pruebas, Long telefono_contacto) {
+        this.apellido = apellido;
+        this.legajo = legajo;
+        this.nombre = nombre;
+        this.telefono_contacto = telefono_contacto;
+    }
+
+    @Override
+    public String toString() {
+        return "Empleados{" +
+                "legajo=" + legajo +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", telefono_contacto=" + telefono_contacto +
+                '}';
+    }
 
     public Empleados() {
         super();
