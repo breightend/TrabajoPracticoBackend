@@ -30,6 +30,10 @@ public class InteresadosService {
         }
     }
 
+    public Interesados getInteresadoById(Long id){
+        return interesadosRepository.findById(id).orElseThrow();
+    }
+
     public void deleteInteresadoById(long id){
         Interesados interesado = interesadosRepository.findById(id).orElseThrow();
         this.interesadosRepository.delete(interesado);

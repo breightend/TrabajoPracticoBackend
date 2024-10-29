@@ -29,4 +29,8 @@ public class EmpleadosService {
     public void addNewEmpleado(Empleados empleado) {
         empleadoRepository.save(empleado);
     }
+
+    public Empleados getEmpleadoById(long id) {
+        return empleadoRepository.findById(id).orElseThrow();
+    }
 }

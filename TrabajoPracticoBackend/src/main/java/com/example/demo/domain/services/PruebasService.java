@@ -18,7 +18,7 @@ public class PruebasService {
     }
 
     public void createPrueba(Pruebas prueba){
-            pruebasRepository.save(prueba);
+        pruebasRepository.save(prueba);
 
     }
 }

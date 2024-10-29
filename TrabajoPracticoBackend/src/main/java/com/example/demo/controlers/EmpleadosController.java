@@ -27,4 +27,9 @@ public class EmpleadosController {
     public void postEmpleado(@RequestBody Empleados empleado){
         empleadosService.addNewEmpleado(empleado);
     }
+
+    @GetMapping(path = "/{id}")
+    public Empleados getEmpleadoById(@PathVariable int id){
+        return empleadosService.getEmpleadoById(id);
+    }
 }

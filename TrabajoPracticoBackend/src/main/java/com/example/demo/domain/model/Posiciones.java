@@ -6,9 +6,13 @@ import jakarta.persistence.*;
 public class Posiciones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Integer id;
+    @Column(name = "FECHA_HORA")
     private String fecha_hora;
+    @Column(name = "LATITUD")
     private Integer latitud;
+    @Column(name = "LONGITUD")
     private Integer longitud;
 
     @OneToOne

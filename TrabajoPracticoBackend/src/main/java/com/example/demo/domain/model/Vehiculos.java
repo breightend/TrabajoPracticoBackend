@@ -6,17 +6,23 @@ import jakarta.persistence.*;
 public class Vehiculos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Integer id;
+    @Column(name = "PATENTE")
     private String patente;
 
     //Relaciones
     //Modelos
     @ManyToOne(cascade = CascadeType.ALL)
-    private Modelos id_modelo;
+    @JoinColumn(referencedColumnName = "ID")
+    private Modelos modelos;
 
-    public Vehiculos(Integer id, Modelos id_modelo, String patente) {
+    @Column(name = "ANIO")
+    private Integer anio;
+
+    public Vehiculos(Integer id, Modelos modelos, String patente) {
         this.id = id;
-        this.id_modelo = id_modelo;
+        this.modelos = modelos;
         this.patente = patente;
     }
 

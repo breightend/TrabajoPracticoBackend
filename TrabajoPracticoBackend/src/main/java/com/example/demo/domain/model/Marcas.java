@@ -7,7 +7,11 @@ public class Marcas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
+    @Column(name = "ID")
+
     private Integer id;
+    @Column(name = "NOMBRE")
+
     private String nombre;
 
 

@@ -5,22 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0e7f32-9ad7-499d-85b4-6a86527a5b52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/interfaces/PruebasRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/interfaces/VehiculoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b9c719f-7435-4fed-b227-08a91acf4f25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3b9c719f-7435-4fed-b227-08a91acf4f25/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/InteresadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/InteresadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/EmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/EmpleadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Empleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Empleados.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Interesados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Interesados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Marcas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Marcas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Modelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Modelos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Pruebas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Pruebas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/EmpleadosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/EmpleadosService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/InteresadosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/InteresadosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/InteresadosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/InteresadosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/EmpleadosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/EmpleadosController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/PruebasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/PruebasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Interesados.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Interesados.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Pruebas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Pruebas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/EmpleadosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/EmpleadosService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/InteresadosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/InteresadosService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,7 +103,8 @@
       <updated>1730113206930</updated>
       <workItem from="1730113208474" duration="1197000" />
       <workItem from="1730210025588" duration="1085000" />
-      <workItem from="1730211249822" duration="3383000" />
+      <workItem from="1730211249822" duration="3508000" />
+      <workItem from="1730238991096" duration="4665000" />
     </task>
     <servers />
   </component>

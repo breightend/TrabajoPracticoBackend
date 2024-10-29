@@ -8,9 +8,13 @@ import java.util.List;
 public class Empleados {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "LEGAJO")
     private Integer legajo;
+    @Column(name = "NOMBRE")
     private String nombre;
+    @Column(name = "APELLIDO")
     private String apellido;
+    @Column(name = "TELEFONO_CONTACTO")
     private Long telefono_contacto;
 
     public Long getTelefono_contacto() {

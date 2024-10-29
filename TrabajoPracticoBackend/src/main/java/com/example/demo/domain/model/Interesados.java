@@ -14,24 +14,35 @@ public class Interesados {
     private Integer id;
     @Setter
     @Getter
+    @Column(name = "TIPO_DOCUMENTO")
     private String tipo_documento;
     @Setter
     @Getter
+    @Column(name = "DOCUMENTO")
     private String documento;
     @Setter
     @Getter
+    @Column(name = "NOMBRE")
     private String nombre;
     @Setter
     @Getter
+    @Column(name = "APELLIDO")
+
     private String apellido;
     @Setter
     @Getter
+    @Column(name = "RESTRINGIDO")
+
     private Boolean restringido;
     @Setter
     @Getter
+    @Column(name = "NRO_LICENCIA")
+
     private Integer nro_licencia;
     @Setter
     @Getter
+    @Column(name = "FECHA_VENCIMIENTO_LICENCIA")
+
     private String fecha_vencimiento_licencia;
 //    @OneToMany(mappedBy = "interesados")
 //    private Set<Pruebas> pruebas;

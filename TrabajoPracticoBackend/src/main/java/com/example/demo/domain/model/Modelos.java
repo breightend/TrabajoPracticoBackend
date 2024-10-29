@@ -6,17 +6,22 @@ import jakarta.persistence.*;
 public class Modelos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
+
     private Integer id;
+    @Column(name = "DESCRIPCION")
+
     private String descripcion;
     //Relaciones
     @ManyToOne(cascade = CascadeType.ALL)
-    private Marcas id_marca;
+    @JoinColumn(referencedColumnName = "ID")
+    private Marcas marcas;
 
 
-    public Modelos(String descripcion, Integer id, Marcas id_marca) {
+    public Modelos(String descripcion, Integer id, Marcas marcas) {
         this.descripcion = descripcion;
         this.id = id;
-        this.id_marca = id_marca;
+        this.marcas = marcas;
     }
 
     public Modelos() {
