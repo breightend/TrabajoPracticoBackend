@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
@@ -25,7 +26,7 @@ public class Interesados {
     private String apellido;
     @Setter
     @Getter
-    private Integer restringido;
+    private Boolean restringido;
     @Setter
     @Getter
     private Integer nro_licencia;
@@ -35,7 +36,7 @@ public class Interesados {
 //    @OneToMany(mappedBy = "interesados")
 //    private Set<Pruebas> pruebas;
 
-    public Interesados(String apellido, String fecha_vencimiento, Integer id, String nombre, Integer nro_licencia, Integer restringido, String tipo_documento) {
+    public Interesados(String apellido, String fecha_vencimiento, Integer id, String nombre, Integer nro_licencia, Boolean   restringido, String tipo_documento) {
         this.apellido = apellido;
         this.fecha_vencimiento_licencia = fecha_vencimiento;
         this.id = id;
@@ -48,5 +49,11 @@ public class Interesados {
 
     public Interesados() {
         super();
+    }
+
+    public boolean licenciaVencida(){
+        LocalDate fechaLocal = LocalDate.parse(fecha_vencimiento_licencia);
+        return fechaLocal.isAfter(LocalDate.now());
+
     }
 }
