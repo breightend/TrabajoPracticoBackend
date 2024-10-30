@@ -10,7 +10,7 @@ public class Modelos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     @Getter
-    private Integer id;
+    private Long id;
     @Column(name = "DESCRIPCION")
     @Getter
     @Setter
@@ -22,7 +22,7 @@ public class Modelos {
     private Marcas marcas;
 
 
-    public Modelos(String descripcion, Integer id, Marcas marcas) {
+    public Modelos(String descripcion, Long id, Marcas marcas) {
         this.descripcion = descripcion;
         this.id = id;
         this.marcas = marcas;

@@ -5,22 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0e7f32-9ad7-499d-85b4-6a86527a5b52" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/TestControler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Empleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Empleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Interesados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Interesados.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Marcas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Marcas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Modelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Modelos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Posiciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Posiciones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Pruebas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Pruebas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/InteresadosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/InteresadosService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/interfaces/PruebasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/interfaces/PruebasRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/PruebasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/PruebasController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Empleados.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Empleados.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Interesados.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Interesados.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Marcas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Marcas.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Modelos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Modelos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Posiciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Posiciones.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Pruebas.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Pruebas.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/InteresadosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/InteresadosService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/interfaces/PruebasRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/repositories/interfaces/PruebasRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +68,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.TrabajoPracticoApplication.executor": "Run",
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
@@ -82,8 +94,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -100,6 +112,7 @@
       <workItem from="1730211249822" duration="3508000" />
       <workItem from="1730238991096" duration="4665000" />
       <workItem from="1730245180783" duration="2950000" />
+      <workItem from="1730293180558" duration="9195000" />
     </task>
     <servers />
   </component>

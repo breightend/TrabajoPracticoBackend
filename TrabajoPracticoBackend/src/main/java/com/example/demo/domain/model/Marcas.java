@@ -11,7 +11,7 @@ public class Marcas {
     //Atributos
     @Column(name = "ID")
     @Getter
-    private Integer id;
+    private Long id;
 
     @Getter
     @Setter
@@ -20,7 +20,7 @@ public class Marcas {
 
 
 
-    public Marcas(Integer id, String nombre) {
+    public Marcas(Long id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }

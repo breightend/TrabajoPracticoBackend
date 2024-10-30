@@ -23,11 +23,7 @@ public class InteresadosService {
     }
 
     public void saveInteresado(Interesados interesado) throws InvalidObjectException {
-        if(interesado.getRestringido()){
-            interesadosRepository.save(interesado);
-        } else{
-            throw new InvalidObjectException("Usuario restringido para las pruebas");
-        }
+        interesadosRepository.save(interesado);
     }
 
     public Interesados getInteresadoById(Long id){

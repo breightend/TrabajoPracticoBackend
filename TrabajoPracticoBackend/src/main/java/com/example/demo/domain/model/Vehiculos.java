@@ -10,7 +10,7 @@ public class Vehiculos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     @Getter
-    private Integer id;
+    private Long id;
     @Column(name = "PATENTE")
     @Getter
     private String patente;
@@ -27,7 +27,7 @@ public class Vehiculos {
     @Setter
     private Integer anio;
 
-    public Vehiculos(Integer id, Modelos modelos, String patente) {
+    public Vehiculos(Long id, Modelos modelos, String patente) {
         this.id = id;
         this.modelos = modelos;
         this.patente = patente;

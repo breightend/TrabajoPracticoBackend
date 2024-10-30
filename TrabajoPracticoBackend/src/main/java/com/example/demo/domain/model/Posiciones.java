@@ -7,7 +7,7 @@ public class Posiciones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Integer id;
+    private Long id;
     @Column(name = "FECHA_HORA")
     private String fecha_hora;
     @Column(name = "LATITUD")
@@ -18,7 +18,7 @@ public class Posiciones {
     @OneToOne
     private Vehiculos id_vehiculo;
 
-    public Posiciones(String fecha_hora, Integer id, Vehiculos id_vehiculo, Integer latitud, Integer longitud) {
+    public Posiciones(String fecha_hora, Long id, Vehiculos id_vehiculo, Integer latitud, Integer longitud) {
         this.fecha_hora = fecha_hora;
         this.id = id;
         this.id_vehiculo = id_vehiculo;

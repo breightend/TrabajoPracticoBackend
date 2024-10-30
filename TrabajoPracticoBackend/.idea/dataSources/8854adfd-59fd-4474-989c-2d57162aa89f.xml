@@ -499,7 +499,7 @@
     </routine>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-10-26.17:58:30</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-10-30.13:35:45</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1773,32 +1773,29 @@
       <StoredType>INTEGER|0s</StoredType>
     </column>
     <column id="597" parent="560" name="FECHA_HORA_INICIO">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="598" parent="560" name="FECHA_HORA_FIN">
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
-      <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TIMESTAMP|0s</StoredType>
     </column>
     <column id="599" parent="560" name="COMENTARIOS">
       <Position>7</Position>
-      <StoredType>TEXT(500)|0s</StoredType>
+      <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="600" parent="560" name="Pruebas_Vehiculos_FK">
+    <foreign-key id="600" parent="560">
       <ColNames>ID_VEHICULO</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Vehiculos</RefTableName>
     </foreign-key>
-    <foreign-key id="601" parent="560" name="Pruebas_Interesados_FK">
+    <foreign-key id="601" parent="560">
       <ColNames>ID_INTERESADO</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Interesados</RefTableName>
     </foreign-key>
-    <foreign-key id="602" parent="560" name="Pruebas_Empleados_FK">
+    <foreign-key id="602" parent="560">
       <ColNames>ID_EMPLEADO</ColNames>
       <RefColNames>LEGAJO</RefColNames>
       <RefTableName>Empleados</RefTableName>
