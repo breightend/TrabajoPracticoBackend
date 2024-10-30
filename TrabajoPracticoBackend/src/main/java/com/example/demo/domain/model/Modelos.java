@@ -1,20 +1,24 @@
 package com.example.demo.domain.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 public class Modelos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-
+    @Getter
     private Integer id;
     @Column(name = "DESCRIPCION")
-
+    @Getter
+    @Setter
     private String descripcion;
-    //Relaciones
+    //Relacione
+    @Getter
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(referencedColumnName = "ID")
+    @JoinColumn(referencedColumnName = "ID", name = "ID_MARCA")
     private Marcas marcas;
 
 

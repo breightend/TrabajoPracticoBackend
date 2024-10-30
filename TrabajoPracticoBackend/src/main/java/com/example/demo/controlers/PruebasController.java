@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
@@ -34,6 +35,11 @@ public class PruebasController {
 
     }
 
+    @GetMapping
+    public ResponseEntity<List<Pruebas>> getAllPruebas() {
+        return ResponseEntity.ok().body(pruebasService.getPruebas());
+    }
+
     @PostMapping
     public ResponseEntity<Object> postPruebasService(@RequestParam Long idInteresado, Long LegajoEmpleado,
                                                      Long idVehiculo) {
@@ -42,8 +48,9 @@ public class PruebasController {
             Interesados interesado = interesadosService.getInteresadoById(idInteresado);
             Empleados empleado = empleadosService.getEmpleadoById(LegajoEmpleado);
             LocalDateTime now = LocalDateTime.now();
+            LocalDateTime aft = LocalDateTime.now().plusHours(1);
 
-            Pruebas nuevaPrueba = new Pruebas(empleado, vehiculo, interesado, now);
+            Pruebas nuevaPrueba = new Pruebas(empleado, vehiculo, interesado, now, aft);
 
             this.pruebasService.createPrueba(nuevaPrueba);
 

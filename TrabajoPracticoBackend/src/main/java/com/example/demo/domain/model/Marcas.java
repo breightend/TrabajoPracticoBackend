@@ -1,6 +1,8 @@
 package com.example.demo.domain.model;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 public class Marcas {
@@ -8,10 +10,12 @@ public class Marcas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     @Column(name = "ID")
-
+    @Getter
     private Integer id;
-    @Column(name = "NOMBRE")
 
+    @Getter
+    @Setter
+    @Column(name = "NOMBRE")
     private String nombre;
 
 
