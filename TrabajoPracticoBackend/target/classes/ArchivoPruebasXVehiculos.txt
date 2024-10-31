@@ -1,28 +1,15 @@
-Archivo de información de pruebas para el vehiculoZZ111AAID Prueba: 3
-Nombre de Empleado encargado de la prueba: Alan
-Nombre del interesado que solicitó la prueba: Maria
-Fecha y hora de inicio de la prueba: 2024-10-30T11:31:28.156
-Fecha y hora de fin de la prueba: 2024-10-30T12:17:30.279
-Comentarios respecto a la prueba realizada: Sin comentarios extras
+Archivo de información de pruebas para el vehiculoZZ012FT
+---------------------------------------------------------------ID Prueba: 1
+Nombre de Empleado encargado de la prueba: Mario
+Nombre del interesado que solicitó la prueba: Soledad
+Fecha y hora de inicio de la prueba: 2024-10-29T20:58:24.120
+Fecha y hora de fin de la prueba: 2024-10-29T21:58:24.120
+Comentarios respecto a la prueba realizada: null
 ------------------------------------------------------------------------------------------------------------------
-ID Prueba: 4
-Nombre de Empleado encargado de la prueba: Alan
-Nombre del interesado que solicitó la prueba: Maria
-Fecha y hora de inicio de la prueba: 2024-10-30T12:17:39.474
-Fecha y hora de fin de la prueba: 2024-10-30T12:18:14.891
-Comentarios respecto a la prueba realizada: Sin comentarios extras
-------------------------------------------------------------------------------------------------------------------
-ID Prueba: 5
-Nombre de Empleado encargado de la prueba: Alan
-Nombre del interesado que solicitó la prueba: Maria
-Fecha y hora de inicio de la prueba: 2024-10-30T12:19:02.193
-Fecha y hora de fin de la prueba: 2024-10-30T12:19:15.961
-Comentarios respecto a la prueba realizada: El interesado estuvo diciendo malas palabras durante toda la prueba
-------------------------------------------------------------------------------------------------------------------
-ID Prueba: 6
-Nombre de Empleado encargado de la prueba: Alan
-Nombre del interesado que solicitó la prueba: Maria
-Fecha y hora de inicio de la prueba: 2024-10-30T12:30:29.312
+ID Prueba: 8
+Nombre de Empleado encargado de la prueba: Gonzalo
+Nombre del interesado que solicitó la prueba: Soledad
+Fecha y hora de inicio de la prueba: 2024-10-31T08:45:50.807
 Fecha y hora de fin de la prueba: La prueba se encuentra en curso
 Comentarios respecto a la prueba realizada: null
 ------------------------------------------------------------------------------------------------------------------
