@@ -25,4 +25,5 @@ public class VehiculoController {
         return ResponseEntity.ok(vehiculosService.findByID(id)).getBody();
 
     }
+
 }

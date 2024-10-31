@@ -12,8 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InvalidObjectException;
 import java.time.LocalDateTime;
+import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -103,5 +107,40 @@ public class PruebasController {
         }catch (InvalidObjectException | NoSuchElementException e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
+    }
+
+    @GetMapping(path = "/reportes/pruebasXvehiculos")
+    public ResponseEntity<String> reporteDePruebasPorVehiculo(@RequestParam Long vehiculoId) throws IOException {
+        List<Pruebas> pruebasConVehiculo = pruebasService.encontrarPruebasConVehiculo(vehiculoId);
+        
+        FileWriter fw = new FileWriter("src\\main\\resources\\ArchivoPruebasXVehiculos.txt");
+        StringBuilder sb = new StringBuilder("Archivo de información de pruebas para el vehiculo" + vehiculosService.findByID(vehiculoId).getPatente()).append("\n");
+        sb.append("---------------------------------------------------------------");
+        fw.append(sb.toString());
+        sb.delete(0, sb.length());
+
+        Iterator<Pruebas> iterator = pruebasConVehiculo.iterator();
+        while (iterator.hasNext()) {
+            Pruebas prueba = iterator.next();
+            sb.append("ID Prueba: ").append(prueba.getId()).append("\n");
+            sb.append("Nombre de Empleado encargado de la prueba: ").append(prueba.getEmpleado().getNombre()).append("\n");
+            sb.append("Nombre del interesado que solicitó la prueba: ").append(prueba.getInteresados().getNombre()).append("\n");
+            sb.append("Fecha y hora de inicio de la prueba: ").append(prueba.getFecha_hora_inicio()).append("\n");
+            sb.append("Fecha y hora de fin de la prueba: ");
+            if (prueba.getFecha_hora_fin() != null) {
+                sb.append(prueba.getFecha_hora_fin()).append("\n");
+            }else{
+                sb.append("La prueba se encuentra en curso").append("\n");
+            }
+            sb.append("Comentarios respecto a la prueba realizada: ").append(prueba.getComentarios()).append("\n");
+
+            sb.append("------------------------------------------------------------------------------------------------------------------").append("\n");
+            fw.append(sb.toString());
+            sb.delete(0, sb.length());
+        }
+
+        fw.flush();
+
+        return ResponseEntity.ok("El archivo fue creado correctamente en la carpeta del proyecto");
     }
 }

@@ -9,10 +9,7 @@ import org.springframework.stereotype.Service;
 import java.io.InvalidObjectException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class PruebasService {
@@ -97,5 +94,22 @@ public class PruebasService {
             }
         }
         return false;
+    }
+
+    public List<Pruebas> encontrarPruebasConVehiculo(Long idVehiculo) throws NoSuchElementException {
+        List<Pruebas> pruebas = this.getPruebas();
+        List<Pruebas> pruebasToReturn = new ArrayList<>();
+        Iterator<Pruebas> iterator = pruebas.iterator();
+        while(iterator.hasNext()){
+            Pruebas prueba = iterator.next();
+            if(prueba.getId_vehiculo().getId().equals(idVehiculo)){
+                pruebasToReturn.add(prueba);
+            }
+        }
+        if (pruebasToReturn.isEmpty()){
+            throw new NoSuchElementException("No se encontraron pruebas con ese vehiculo");
+        }else{
+            return pruebasToReturn;
+        }
     }
 }
