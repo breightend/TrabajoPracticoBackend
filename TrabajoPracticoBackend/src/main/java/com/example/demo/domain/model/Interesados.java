@@ -1,6 +1,6 @@
 package com.example.demo.domain.model;
 
-import jakarta.persistence.*;
+ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 

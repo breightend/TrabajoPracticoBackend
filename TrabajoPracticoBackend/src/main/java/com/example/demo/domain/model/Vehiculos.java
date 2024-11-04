@@ -18,7 +18,7 @@ public class Vehiculos {
     //Relaciones
     //Modelos
     @Getter
-    @ManyToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(referencedColumnName = "id", name = "ID_MODELO")
     private Modelos modelos;
 
