@@ -5,24 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0e7f32-9ad7-499d-85b4-6a86527a5b52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PosicionesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repositories/interfaces/PosicionesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/configuration/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/PruebasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Modelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Modelos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Posiciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Posiciones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/NotificacionesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/NotificacionesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ArchivoPruebasXVehiculos.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ArchivoPruebasXVehiculos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ArchivoPruebasXVehiculos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/PruebasController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/PruebasController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Modelos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Modelos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Posiciones.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Posiciones.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,26 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.TrabajoPracticoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.inline.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.TrabajoPracticoApplication.executor": "Run",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Brenda/Desktop/tp-backend/TrabajoPracticoBackend/TrabajoPracticoBackend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TrabajoPracticoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -85,8 +84,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
       </set>
     </attachedChunks>
   </component>
@@ -107,6 +106,7 @@
       <workItem from="1730332364921" duration="26000" />
       <workItem from="1730332570640" duration="1852000" />
       <workItem from="1730372833279" duration="6004000" />
+      <workItem from="1730930120919" duration="4994000" />
     </task>
     <servers />
   </component>

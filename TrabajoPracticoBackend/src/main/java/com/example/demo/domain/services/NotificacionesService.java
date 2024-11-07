@@ -30,7 +30,7 @@ public class NotificacionesService {
                 "¡Hola! \n " +
                 "Tenemos un vehiculo que puede interesarte \n" +
                 "Marca: " + vehiculo.getModelos().getMarcas().getNombre() + "\n" +
-                "Modelo: " + vehiculo.getModelos().getDescipcion() + "\n" +
+                "Modelo: " + vehiculo.getModelos().getDescripcion() + "\n" +
                 "¡Solo por esta semana ofrecemos financiamiento especial y descuento en la compra de este modelo! \n" +
                 "Reserva tu prueba de manejo respondiendo a este mensaje, No dejes pasar esta oportunidad de llevarte tu próximo auto!";
 

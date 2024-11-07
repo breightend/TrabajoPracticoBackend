@@ -41,5 +41,13 @@ public class Posiciones {
                 ", id_vehiculo=" + id_vehiculo +
                 '}';
     }
+    public Boolean dentroDelLimite(double limLatitud, double limLongitud) {
+       if (limLatitud >= this.latitud && limLongitud >= this.longitud){
+           return true;
+       }
+       else {
+           return false;
+       }
+    }
 
 }

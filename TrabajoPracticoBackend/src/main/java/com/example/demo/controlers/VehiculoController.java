@@ -38,9 +38,11 @@ public class VehiculoController {
     @GetMapping(path = "/posicionActual")
     public ResponseEntity<Posiciones> obtenerPosicionAuto(Long vehiculoId) {
         try{
+            vehiculosService.obtenerInfoApi();
             return ResponseEntity.ok(vehiculosService.obtenerPosicionActual(vehiculoId));
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
+
 }
