@@ -1,8 +1,9 @@
 package com.example.demo.domain.services;
 
-import com.example.demo.domain.model.Posiciones;
-import com.example.demo.domain.model.Vehiculos;
+import com.example.demo.domain.model.*;
 import com.example.demo.repositories.interfaces.VehiculoRepository;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +21,21 @@ public class VehiculosService {
     private final VehiculoRepository vehiculoRepository;
     private final PosicionesService posicionesService;
     private final RestTemplate restTemplate;
+    private final PruebasService pruebasService;
+    private final NotificacionesService notificacionesService;
+    private final EmpleadosService empleadosService;
+    private final InteresadosService interesadosService;
+
 
     @Autowired
-    public VehiculosService(VehiculoRepository vehiculoRepository, PosicionesService posicionesService, RestTemplate restTemplate) {
+    public VehiculosService(InteresadosService interesadosService, EmpleadosService empleadosService, NotificacionesService notificacionesService,VehiculoRepository vehiculoRepository, PosicionesService posicionesService, RestTemplate restTemplate, PruebasService pruebasService) {
         this.vehiculoRepository = vehiculoRepository;
         this.posicionesService = posicionesService;
         this.restTemplate = restTemplate;
+        this.pruebasService = pruebasService;
+        this.notificacionesService = notificacionesService;
+        this.empleadosService = empleadosService;
+        this.interesadosService = interesadosService;
     }
 
     public Vehiculos findByID(Long Id){
@@ -38,35 +48,66 @@ public class VehiculosService {
 
     public Posiciones obtenerPosicionActual(Long vehiculoId){
         try{
-            return posicionesService.getPosicionActualVehiculo(vehiculoId);
+            Coordenadas max = obtenerInfoApi("radioAdmitidoKm");
+            Pruebas pruebaEnCurso = pruebasService.recibirPruebasEnCursoConVehiculo(vehiculoId);
+            if (posicionesService.getPosicionActualVehiculo(vehiculoId).dentroDelLimite(max.getLatitud(), max.getLongitud())){
+                return posicionesService.getPosicionActualVehiculo(vehiculoId);
+            }else {
+                long telefonoEmpleado = empleadosService.getEmpleadoById(pruebaEnCurso.getEmpleado().gettelefono_contacto());
+                notificacionesService.generarNotificacionACelular(telefonoEmpleado);
+                pruebaEnCurso.getInteresado.setRestringido(true);
+                interesadosService.saveInteresado(pruebaEnCurso.getInteresado());
+                return posicionesService.getPosicionActualVehiculo(vehiculoId);
+            }
         } catch (NoSuchElementException e) {
             throw e;
         }
     }
-    public double[] obtenerInfoApi(){
+    public Posiciones validarPosiciones(Posiciones posVehiculo){
+
+
+    }
+
+    public Coordenadas obtenerInfoApi(String infoRequerida)throws RuntimeException{
         String url = "https://labsys.frc.utn.edu.ar/apps-disponibilizadas/backend/api/v1/configuracion/";
 
         try {
-            // Realizar la solicitud GET y obtener la respuesta JSON
-            String response = restTemplate.getForObject(url, String.class);
+            if (infoRequerida == "coordenadasAgencia") {
+                String response = restTemplate.getForObject(url, String.class);
 
-            // Procesar la respuesta JSON con Jackson
-            ObjectMapper mapper = new ObjectMapper();
-            JsonNode jsonNode = mapper.readTree(response);
+                // Procesar la respuesta JSON con Jackson
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode jsonNode = mapper.readTree(response);
+                double longitud = Double.parseDouble( jsonNode.get("coordenadasAgencia").get("lon").toString());
+                double latitud = Double.parseDouble( jsonNode.get("coordenadasAgencia").get("lat").toString());
+                return new Coordenadas(latitud, longitud);
 
-            // Acceso a los datos
-            System.out.println("Coordenadas Agencia:");
-            System.out.println("Latitud: " + jsonNode.get("coordenadasAgencia").get("lat"));
-            System.out.println("Longitud: " + jsonNode.get("coordenadasAgencia").get("lon"));
-
-            System.out.println("Zonas Restringidas:");
-            for (JsonNode zona : jsonNode.get("zonasRestringidas")) {
-                System.out.println("Noroeste: Lat " + zona.get("noroeste").get("lat") + ", Lon " + zona.get("noroeste").get("lon"));
-                System.out.println("Sureste: Lat " + zona.get("sureste").get("lat") + ", Lon " + zona.get("sureste").get("lon"));
             }
+            else if(infoRequerida == "radioAdmitidoKm"){
+                String response = restTemplate.getForObject(url, String.class);
 
-        } catch (Exception e) {
-            e.printStackTrace();
+                // Procesar la respuesta JSON con Jackson
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode jsonNode = mapper.readTree(response);
+                Integer radioAdmitidoKm = Integer.parseInt( jsonNode.get("radioAdmitidoKm").toString());
+                double latitudAgencia = Double.parseDouble(jsonNode.get("coordenadasAgencia").get("lat").toString());
+                return calcularCoordenadas(radioAdmitidoKm, latitudAgencia);
+            }
+            // Realizar la solicitud GET y obtener la respuesta JSON
+
+
+        } catch (RuntimeException e) {
+            throw new RuntimeException();
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         }
+        return null;
+    }
+//Coordenadas màximas de movimiento que el vehiculo tiene permitido.
+    public Coordenadas calcularCoordenadas(Integer radioAdmitidoKm, double latitud) {
+        double latitudGrado = radioAdmitidoKm/111.0;
+        double longitudGrado = radioAdmitidoKm/111.0 * Math.cos(Math.toRadians(latitud));
+        return new Coordenadas(latitudGrado, longitudGrado);
+
     }
 }

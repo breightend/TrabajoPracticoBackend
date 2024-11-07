@@ -33,4 +33,5 @@ public class EmpleadosService {
     public Empleados getEmpleadoById(long id) {
         return empleadoRepository.findById(id).orElseThrow();
     }
+
 }

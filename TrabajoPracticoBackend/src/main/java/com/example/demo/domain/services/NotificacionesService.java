@@ -34,6 +34,13 @@ public class NotificacionesService {
                 "¡Solo por esta semana ofrecemos financiamiento especial y descuento en la compra de este modelo! \n" +
                 "Reserva tu prueba de manejo respondiendo a este mensaje, No dejes pasar esta oportunidad de llevarte tu próximo auto!";
 
-        return new Notificacion(texto);
+        long telefono = 234354435;
+        return new Notificacion(texto, telefono);
+    }
+
+    public void generarNotificacionACelular(long telefono){
+        String texto = "El vehiculo asignado se pasó de los limites establecidos, hagalo volver de inmediato";
+        Notificacion notificacion = new Notificacion(texto, telefono);
+        this.notificar(notificacion);
     }
 }
