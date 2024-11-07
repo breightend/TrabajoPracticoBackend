@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.InvalidObjectException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -53,19 +54,17 @@ public class VehiculosService {
             if (posicionesService.getPosicionActualVehiculo(vehiculoId).dentroDelLimite(max.getLatitud(), max.getLongitud())){
                 return posicionesService.getPosicionActualVehiculo(vehiculoId);
             }else {
-                long telefonoEmpleado = empleadosService.getEmpleadoById(pruebaEnCurso.getEmpleado().gettelefono_contacto());
+                long telefonoEmpleado = pruebaEnCurso.getEmpleado().getTelefono_contacto();
                 notificacionesService.generarNotificacionACelular(telefonoEmpleado);
-                pruebaEnCurso.getInteresado.setRestringido(true);
-                interesadosService.saveInteresado(pruebaEnCurso.getInteresado());
+                pruebaEnCurso.getInteresados().setRestringido(true);
+                interesadosService.saveInteresado(pruebaEnCurso.getInteresados());
                 return posicionesService.getPosicionActualVehiculo(vehiculoId);
             }
         } catch (NoSuchElementException e) {
             throw e;
+        } catch (InvalidObjectException e) {
+            throw new RuntimeException(e);
         }
-    }
-    public Posiciones validarPosiciones(Posiciones posVehiculo){
-
-
     }
 
     public Coordenadas obtenerInfoApi(String infoRequerida)throws RuntimeException{

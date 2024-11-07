@@ -1,22 +1,22 @@
 package com.example.demo.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
+@Table(name = "Notificaciones")
 public class Notificacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Setter
+    @Column(name = "Texto")
     private String texto;
     @Setter
+    @Column(name = "Telefono")
     private long telefono;
 
     public Notificacion(String texto, long telefono){
@@ -25,4 +25,7 @@ public class Notificacion {
     }
 
 
+    public Notificacion() {
+
+    }
 }
