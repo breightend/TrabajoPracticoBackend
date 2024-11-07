@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee0e7f32-9ad7-499d-85b4-6a86527a5b52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/NotificacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/NotificacionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Notificacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Notificacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ArchivoPruebasXVehiculos.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -82,6 +82,7 @@ public class VehiculosService {
                 return new Coordenadas(latitud, longitud);
 
             }
+
             else if(infoRequerida == "radioAdmitidoKm"){
                 String response = restTemplate.getForObject(url, String.class);
 
@@ -89,6 +90,15 @@ public class VehiculosService {
                 ObjectMapper mapper = new ObjectMapper();
                 JsonNode jsonNode = mapper.readTree(response);
                 Integer radioAdmitidoKm = Integer.parseInt( jsonNode.get("radioAdmitidoKm").toString());
+                double latitudAgencia = Double.parseDouble(jsonNode.get("coordenadasAgencia").get("lat").toString());
+                return calcularCoordenadas(radioAdmitidoKm, latitudAgencia);
+            } else if (infoRequerida == "zonasRestringidas") {
+                String response = restTemplate.getForObject(url, String.class);
+
+                // Procesar la respuesta JSON con Jackson
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode jsonNode = mapper.readTree(response);
+                List<Coordenadas> coordenadasRestringidas = jsonNode.get("zonasRestringidas").forEach();
                 double latitudAgencia = Double.parseDouble(jsonNode.get("coordenadasAgencia").get("lat").toString());
                 return calcularCoordenadas(radioAdmitidoKm, latitudAgencia);
             }

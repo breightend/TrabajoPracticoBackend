@@ -25,7 +25,7 @@ public class NotificacionController {
     public List<Notificacion> obtenerNotificacion() { return notificacionesService.getNotificaciones(); }
 
     @PostMapping(path = "/{id}?precio")
-    public void enviarNotificacion(@RequestParam Long id_vehiculo){
+    public void enviarNotificacion(@PathVariable long id_vehiculo,@RequestParam Long precio){
         Vehiculos vehiculo = vehiculosService.findByID(id_vehiculo);
         Notificacion notificacion = notificacionesService.generarNotificacion(vehiculo);
         notificacionesService.notificar(notificacion);
