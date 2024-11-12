@@ -112,7 +112,7 @@ public class PruebasController {
     @GetMapping(path = "/reportes/pruebasXvehiculos")
     public ResponseEntity<String> reporteDePruebasPorVehiculo(@RequestParam Long vehiculoId) throws IOException {
         List<Pruebas> pruebasConVehiculo = pruebasService.encontrarPruebasConVehiculo(vehiculoId);
-        
+
         FileWriter fw = new FileWriter("src\\main\\resources\\ArchivoPruebasXVehiculos.txt");
         StringBuilder sb = new StringBuilder("Archivo de información de pruebas para el vehiculo" + vehiculosService.findByID(vehiculoId).getPatente()).append("\n");
         sb.append("---------------------------------------------------------------");
