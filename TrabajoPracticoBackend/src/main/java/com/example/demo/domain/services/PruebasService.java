@@ -1,5 +1,6 @@
 package com.example.demo.domain.services;
 
+import com.example.demo.domain.model.Posiciones;
 import com.example.demo.domain.model.Pruebas;
 import com.example.demo.repositories.interfaces.PruebasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -111,5 +112,30 @@ public class PruebasService {
         }else{
             return pruebasToReturn;
         }
+    }
+
+    public Pruebas recibirPruebasEnCursoConVehiculo(Long idVehiculo) throws NoSuchElementException {
+        List<Pruebas> pruebas = this.getPruebasOnCourse();
+        Iterator<Pruebas> iterator = pruebas.iterator();
+        while(iterator.hasNext()){
+            Pruebas prueba = iterator.next();
+            if(prueba.getId_vehiculo().getId().equals(idVehiculo)){
+                return prueba;
+            }
+        }
+        throw new NoSuchElementException("No se encontraron pruebas con vehiculo");
+    }
+
+    public Posiciones AvanzarVehiculoEnPrueba(Long idVehiculo, Double latitud, Double longitud) throws NoSuchElementException {
+        try{
+            Pruebas prueba = this.recibirPruebasEnCursoConVehiculo(idVehiculo);
+            LocalDateTime now = LocalDateTime.now();
+            Double latitudAgencia = 42.50886738457441;
+            Double longitudAgencia = 1.5347139324337429;
+            return new Posiciones(now.toString(), prueba.getId_vehiculo(), latitudAgencia + latitud, longitudAgencia + longitud);
+        } catch (NoSuchElementException e) {
+            throw new RuntimeException("No se encontraron pruebas con vehiculo");
+        }
+
     }
 }

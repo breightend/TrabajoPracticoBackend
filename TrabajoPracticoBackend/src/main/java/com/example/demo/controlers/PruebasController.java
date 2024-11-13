@@ -1,13 +1,7 @@
 package com.example.demo.controlers;
 
-import com.example.demo.domain.model.Empleados;
-import com.example.demo.domain.model.Interesados;
-import com.example.demo.domain.model.Pruebas;
-import com.example.demo.domain.model.Vehiculos;
-import com.example.demo.domain.services.EmpleadosService;
-import com.example.demo.domain.services.InteresadosService;
-import com.example.demo.domain.services.PruebasService;
-import com.example.demo.domain.services.VehiculosService;
+import com.example.demo.domain.model.*;
+import com.example.demo.domain.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,14 +24,17 @@ public class PruebasController {
     private final VehiculosService vehiculosService;
     private final InteresadosService interesadosService;
     private final EmpleadosService empleadosService;
+    private final PosicionesService posicionesService;
 
     @Autowired
     public PruebasController(PruebasService pruebasService, VehiculosService vehiculosService,
-                             InteresadosService interesadosService, EmpleadosService empleadosService) {
+                             InteresadosService interesadosService, EmpleadosService empleadosService,
+                             PosicionesService posicionesService) {
         this.pruebasService = pruebasService;
         this.vehiculosService = vehiculosService;
         this.interesadosService = interesadosService;
         this.empleadosService = empleadosService;
+        this.posicionesService = posicionesService;
 
     }
 
@@ -102,7 +99,6 @@ public class PruebasController {
     @PatchMapping(path = "/{id}")
     public ResponseEntity<Object> finalizarPruebas(@PathVariable Long id, @RequestParam Optional<String> comentario) {
         try{
-            System.out.println();
             return ResponseEntity.ok(pruebasService.finalizarPrueba(id, comentario));
         }catch (InvalidObjectException | NoSuchElementException e){
             return ResponseEntity.badRequest().body(e.getMessage());
@@ -142,5 +138,17 @@ public class PruebasController {
         fw.flush();
 
         return ResponseEntity.ok("El archivo fue creado correctamente en la carpeta del proyecto");
+    }
+
+    @PostMapping(path = "avanzarVehiculo")
+    public ResponseEntity<String> avanzarVehiculo(@RequestParam Long vehiculoId, Double latitud, Double longitud){
+        try{
+            Posiciones posicion = pruebasService.AvanzarVehiculoEnPrueba(vehiculoId, latitud, longitud);
+            posicionesService.savePosiciones(posicion);
+            return ResponseEntity.ok(posicion.toString());
+        } catch (NoSuchElementException e) {
+            return ResponseEntity.status(403).body("Vehiculo sin pruebas en curso asignadas");
+        }
+
     }
 }

@@ -16,7 +16,7 @@ public class Pruebas {
     private long id;
     @Setter
     @Column(name = "FECHA_HORA_INICIO")
-    private LocalDateTime fecha_hora_inicio;
+    private LocalDateTime fecha_hora_inicio;            //no tendria que ser String??
     @Setter
     @Column(name = "FECHA_HORA_FIN")
     private LocalDateTime fecha_hora_fin;

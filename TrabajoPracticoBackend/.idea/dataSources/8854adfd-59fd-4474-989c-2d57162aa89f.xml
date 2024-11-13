@@ -499,7 +499,7 @@
     </routine>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2024-10-30.13:35:45</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-11-07.12:34:18</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1594,275 +1594,295 @@
     <table id="556" parent="191" name="Interesados"/>
     <table id="557" parent="191" name="Marcas"/>
     <table id="558" parent="191" name="Modelos"/>
-    <table id="559" parent="191" name="Posiciones"/>
-    <table id="560" parent="191" name="Pruebas"/>
-    <table id="561" parent="191" name="Vehiculos"/>
-    <table id="562" parent="191" name="sqlite_master">
+    <table id="559" parent="191" name="Notificaciones"/>
+    <table id="560" parent="191" name="Posiciones"/>
+    <table id="561" parent="191" name="Pruebas"/>
+    <table id="562" parent="191" name="Vehiculos"/>
+    <table id="563" parent="191" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="563" parent="191" name="sqlite_sequence">
+    <table id="564" parent="191" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="564" parent="555" name="LEGAJO">
+    <column id="565" parent="555" name="LEGAJO">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="565" parent="555" name="NOMBRE">
+    <column id="566" parent="555" name="NOMBRE">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT(30)|0s</StoredType>
     </column>
-    <column id="566" parent="555" name="APELLIDO">
+    <column id="567" parent="555" name="APELLIDO">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT(50)|0s</StoredType>
     </column>
-    <column id="567" parent="555" name="TELEFONO_CONTACTO">
+    <column id="568" parent="555" name="TELEFONO_CONTACTO">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <key id="568" parent="555">
+    <key id="569" parent="555">
       <ColNames>LEGAJO</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="569" parent="556" name="ID">
+    <column id="570" parent="556" name="ID">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="570" parent="556" name="TIPO_DOCUMENTO">
+    <column id="571" parent="556" name="TIPO_DOCUMENTO">
       <DefaultExpression>&apos;&quot;DNI&quot;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT(3)|0s</StoredType>
     </column>
-    <column id="571" parent="556" name="DOCUMENTO">
+    <column id="572" parent="556" name="DOCUMENTO">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT(10)|0s</StoredType>
     </column>
-    <column id="572" parent="556" name="NOMBRE">
+    <column id="573" parent="556" name="NOMBRE">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT(50)|0s</StoredType>
     </column>
-    <column id="573" parent="556" name="APELLIDO">
+    <column id="574" parent="556" name="APELLIDO">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT(50)|0s</StoredType>
     </column>
-    <column id="574" parent="556" name="RESTRINGIDO">
+    <column id="575" parent="556" name="RESTRINGIDO">
       <DefaultExpression>FALSE</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>BOOLEAN|0s</StoredType>
     </column>
-    <column id="575" parent="556" name="NRO_LICENCIA">
+    <column id="576" parent="556" name="NRO_LICENCIA">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="576" parent="556" name="FECHA_VENCIMIENTO_LICENCIA">
+    <column id="577" parent="556" name="FECHA_VENCIMIENTO_LICENCIA">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>TIMESTAMP|0s</StoredType>
     </column>
-    <key id="577" parent="556">
+    <key id="578" parent="556">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="578" parent="557" name="ID">
+    <column id="579" parent="557" name="ID">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="579" parent="557" name="NOMBRE">
+    <column id="580" parent="557" name="NOMBRE">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT(30)|0s</StoredType>
     </column>
-    <key id="580" parent="557">
+    <key id="581" parent="557">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="581" parent="558" name="ID">
+    <column id="582" parent="558" name="ID">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="582" parent="558" name="ID_MARCA">
+    <column id="583" parent="558" name="ID_MARCA">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="583" parent="558" name="DESCRIPCION">
+    <column id="584" parent="558" name="DESCRIPCION">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="584" parent="558" name="Modelo_Marca_FK">
+    <foreign-key id="585" parent="558" name="Modelo_Marca_FK">
       <ColNames>ID_MARCA</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Marcas</RefTableName>
     </foreign-key>
-    <key id="585" parent="558">
+    <key id="586" parent="558">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="586" parent="559" name="ID">
+    <column id="587" parent="559" name="ID">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="588" parent="559" name="TEXTO">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="589" parent="559" name="TELEFONO">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <key id="590" parent="559">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="591" parent="560" name="ID">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="587" parent="559" name="ID_VEHICULO">
+    <column id="592" parent="560" name="ID_VEHICULO">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="588" parent="559" name="FECHA_HORA">
+    <column id="593" parent="560" name="FECHA_HORA">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TIMESTAMP|0s</StoredType>
     </column>
-    <column id="589" parent="559" name="LATITUD">
+    <column id="594" parent="560" name="LATITUD">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>REAL|0s</StoredType>
     </column>
-    <column id="590" parent="559" name="LONGITUD">
+    <column id="595" parent="560" name="LONGITUD">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>REAL|0s</StoredType>
     </column>
-    <foreign-key id="591" parent="559" name="Posiciones_Vehiculos_FK">
+    <foreign-key id="596" parent="560" name="Posiciones_Vehiculos_FK">
       <ColNames>ID_VEHICULO</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Vehiculos</RefTableName>
     </foreign-key>
-    <key id="592" parent="559">
+    <key id="597" parent="560">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="593" parent="560" name="ID">
+    <column id="598" parent="561" name="ID">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="594" parent="560" name="ID_VEHICULO">
+    <column id="599" parent="561" name="ID_VEHICULO">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="595" parent="560" name="ID_INTERESADO">
+    <column id="600" parent="561" name="ID_INTERESADO">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="596" parent="560" name="ID_EMPLEADO">
+    <column id="601" parent="561" name="ID_EMPLEADO">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="597" parent="560" name="FECHA_HORA_INICIO">
+    <column id="602" parent="561" name="FECHA_HORA_INICIO">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TIMESTAMP|0s</StoredType>
     </column>
-    <column id="598" parent="560" name="FECHA_HORA_FIN">
+    <column id="603" parent="561" name="FECHA_HORA_FIN">
       <Position>6</Position>
       <StoredType>TIMESTAMP|0s</StoredType>
     </column>
-    <column id="599" parent="560" name="COMENTARIOS">
+    <column id="604" parent="561" name="COMENTARIOS">
       <Position>7</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="600" parent="560">
+    <foreign-key id="605" parent="561">
       <ColNames>ID_VEHICULO</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Vehiculos</RefTableName>
     </foreign-key>
-    <foreign-key id="601" parent="560">
+    <foreign-key id="606" parent="561">
       <ColNames>ID_INTERESADO</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Interesados</RefTableName>
     </foreign-key>
-    <foreign-key id="602" parent="560">
+    <foreign-key id="607" parent="561">
       <ColNames>ID_EMPLEADO</ColNames>
       <RefColNames>LEGAJO</RefColNames>
       <RefTableName>Empleados</RefTableName>
     </foreign-key>
-    <key id="603" parent="560">
+    <key id="608" parent="561">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="604" parent="561" name="ID">
+    <column id="609" parent="562" name="ID">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="605" parent="561" name="PATENTE">
+    <column id="610" parent="562" name="PATENTE">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="606" parent="561" name="ID_MODELO">
+    <column id="611" parent="562" name="ID_MODELO">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="607" parent="561" name="ANIO">
+    <column id="612" parent="562" name="ANIO">
       <DefaultExpression>2019</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <foreign-key id="608" parent="561" name="Vehiculos_Modelos_FK">
+    <foreign-key id="613" parent="562" name="Vehiculos_Modelos_FK">
       <ColNames>ID_MODELO</ColNames>
       <RefColNames>ID</RefColNames>
       <RefTableName>Modelos</RefTableName>
     </foreign-key>
-    <index id="609" parent="561" name="Vehiculo_PATENTE_IDX">
+    <index id="614" parent="562" name="Vehiculo_PATENTE_IDX">
       <ColNames>PATENTE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="610" parent="561">
+    <key id="615" parent="562">
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="611" parent="562" name="type">
+    <column id="616" parent="563" name="type">
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="612" parent="562" name="name">
+    <column id="617" parent="563" name="name">
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="613" parent="562" name="tbl_name">
+    <column id="618" parent="563" name="tbl_name">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="614" parent="562" name="rootpage">
+    <column id="619" parent="563" name="rootpage">
       <Position>4</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="615" parent="562" name="sql">
+    <column id="620" parent="563" name="sql">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="616" parent="563" name="name">
+    <column id="621" parent="564" name="name">
       <Position>1</Position>
     </column>
-    <column id="617" parent="563" name="seq">
+    <column id="622" parent="564" name="seq">
       <Position>2</Position>
     </column>
   </database-model>
