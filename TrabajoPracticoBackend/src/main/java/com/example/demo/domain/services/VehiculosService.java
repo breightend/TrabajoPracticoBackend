@@ -13,8 +13,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.InvalidObjectException;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 @Service
 public class VehiculosService {
@@ -26,10 +25,11 @@ public class VehiculosService {
     private final NotificacionesService notificacionesService;
     private final EmpleadosService empleadosService;
     private final InteresadosService interesadosService;
+    private final AccesoAPI accesoAPI;
 
 
     @Autowired
-    public VehiculosService(InteresadosService interesadosService, EmpleadosService empleadosService, NotificacionesService notificacionesService,VehiculoRepository vehiculoRepository, PosicionesService posicionesService, RestTemplate restTemplate, PruebasService pruebasService) {
+    public VehiculosService(InteresadosService interesadosService, EmpleadosService empleadosService, NotificacionesService notificacionesService, VehiculoRepository vehiculoRepository, PosicionesService posicionesService, RestTemplate restTemplate, PruebasService pruebasService, AccesoAPI accesoAPI) {
         this.vehiculoRepository = vehiculoRepository;
         this.posicionesService = posicionesService;
         this.restTemplate = restTemplate;
@@ -37,9 +37,10 @@ public class VehiculosService {
         this.notificacionesService = notificacionesService;
         this.empleadosService = empleadosService;
         this.interesadosService = interesadosService;
+        this.accesoAPI = accesoAPI;
     }
 
-    public Vehiculos findByID(Long Id){
+    public Vehiculos findByID(Long Id) {
         return this.vehiculoRepository.findById(Id).orElseThrow();
     }
 
@@ -47,13 +48,13 @@ public class VehiculosService {
         return this.vehiculoRepository.findAll();
     }
 
-    public Posiciones obtenerPosicionActual(Long vehiculoId){
-        try{
-            Coordenadas max = obtenerInfoApi("radioAdmitidoKm");
+    public Posiciones obtenerPosicionActual(Long vehiculoId) {
+        try {
+            Coordenadas max = accesoAPI.getRadioAdmitido();
             Pruebas pruebaEnCurso = pruebasService.recibirPruebasEnCursoConVehiculo(vehiculoId);
-            if (posicionesService.getPosicionActualVehiculo(vehiculoId).dentroDelLimite(max.getLatitud(), max.getLongitud())){
+            if (posicionesService.getPosicionActualVehiculo(vehiculoId).dentroDelLimite(max.getLatitud(), max.getLongitud())) {
                 return posicionesService.getPosicionActualVehiculo(vehiculoId);
-            }else {
+            } else {
                 long telefonoEmpleado = pruebaEnCurso.getEmpleado().getTelefono_contacto();
                 notificacionesService.generarNotificacionACelular(telefonoEmpleado);
                 pruebaEnCurso.getInteresados().setRestringido(true);
@@ -67,56 +68,5 @@ public class VehiculosService {
         }
     }
 
-    public Coordenadas obtenerInfoApi(String infoRequerida)throws RuntimeException{
-        String url = "https://labsys.frc.utn.edu.ar/apps-disponibilizadas/backend/api/v1/configuracion/";
 
-        try {
-            if (infoRequerida == "coordenadasAgencia") {
-                String response = restTemplate.getForObject(url, String.class);
-
-                // Procesar la respuesta JSON con Jackson
-                ObjectMapper mapper = new ObjectMapper();
-                JsonNode jsonNode = mapper.readTree(response);
-                double longitud = Double.parseDouble( jsonNode.get("coordenadasAgencia").get("lon").toString());
-                double latitud = Double.parseDouble( jsonNode.get("coordenadasAgencia").get("lat").toString());
-                return new Coordenadas(latitud, longitud);
-
-            }
-
-            else if(infoRequerida == "radioAdmitidoKm"){
-                String response = restTemplate.getForObject(url, String.class);
-
-                // Procesar la respuesta JSON con Jackson
-                ObjectMapper mapper = new ObjectMapper();
-                JsonNode jsonNode = mapper.readTree(response);
-                Integer radioAdmitidoKm = Integer.parseInt( jsonNode.get("radioAdmitidoKm").toString());
-                double latitudAgencia = Double.parseDouble(jsonNode.get("coordenadasAgencia").get("lat").toString());
-                return calcularCoordenadas(radioAdmitidoKm, latitudAgencia);
-            } else if (infoRequerida == "zonasRestringidas") {
-                String response = restTemplate.getForObject(url, String.class);
-
-                // Procesar la respuesta JSON con Jackson
-                ObjectMapper mapper = new ObjectMapper();
-                JsonNode jsonNode = mapper.readTree(response);
-                List<Coordenadas> coordenadasRestringidas = jsonNode.get("zonasRestringidas").forEach();
-                double latitudAgencia = Double.parseDouble(jsonNode.get("coordenadasAgencia").get("lat").toString());
-                return calcularCoordenadas(radioAdmitidoKm, latitudAgencia);
-            }
-            // Realizar la solicitud GET y obtener la respuesta JSON
-
-
-        } catch (RuntimeException e) {
-            throw new RuntimeException();
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-        return null;
-    }
-//Coordenadas màximas de movimiento que el vehiculo tiene permitido.
-    public Coordenadas calcularCoordenadas(Integer radioAdmitidoKm, double latitud) {
-        double latitudGrado = radioAdmitidoKm/111.0;
-        double longitudGrado = radioAdmitidoKm/111.0 * Math.cos(Math.toRadians(latitud));
-        return new Coordenadas(latitudGrado, longitudGrado);
-
-    }
 }

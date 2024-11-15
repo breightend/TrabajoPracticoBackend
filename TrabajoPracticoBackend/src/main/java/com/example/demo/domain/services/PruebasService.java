@@ -1,7 +1,9 @@
 package com.example.demo.domain.services;
 
+import com.example.demo.domain.model.Coordenadas;
 import com.example.demo.domain.model.Posiciones;
 import com.example.demo.domain.model.Pruebas;
+import com.example.demo.domain.model.Vehiculos;
 import com.example.demo.repositories.interfaces.PruebasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.Query;
@@ -16,10 +18,14 @@ import java.util.*;
 public class PruebasService {
 
     private final PruebasRepository pruebasRepository;
+    private final PosicionesService posicionesService;
+    private final AccesoAPI accesoAPI;
 
     @Autowired
-    public PruebasService(PruebasRepository pruebasRepository) {
+    public PruebasService(PruebasRepository pruebasRepository, PosicionesService posicionesService, AccesoAPI accesoAPI) {
         this.pruebasRepository = pruebasRepository;
+        this.posicionesService = posicionesService;
+        this.accesoAPI = accesoAPI;
     }
 
     public List<Pruebas> getPruebas() {
@@ -54,6 +60,11 @@ public class PruebasService {
         }else{
             prueba.setComentarios("Sin comentarios extras");
         }
+
+        //Actualizar posicion del auto
+        Coordenadas concesionaria = accesoAPI.getCoordenadaAgencia();
+        Vehiculos vehiculo = prueba.getId_vehiculo();
+        posicionesService.savePosiciones(new Posiciones(now.toString(), vehiculo, concesionaria.getLatitud(), concesionaria.getLongitud()));
 
         pruebasRepository.save(prueba);
         return prueba;
