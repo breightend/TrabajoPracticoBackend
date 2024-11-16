@@ -20,12 +20,14 @@ public class PruebasService {
     private final PruebasRepository pruebasRepository;
     private final PosicionesService posicionesService;
     private final AccesoAPI accesoAPI;
+    private final NotificacionesService notificacionesService;
 
     @Autowired
-    public PruebasService(PruebasRepository pruebasRepository, PosicionesService posicionesService, AccesoAPI accesoAPI) {
+    public PruebasService(PruebasRepository pruebasRepository, PosicionesService posicionesService, AccesoAPI accesoAPI, NotificacionesService notificacionesService) {
         this.pruebasRepository = pruebasRepository;
         this.posicionesService = posicionesService;
         this.accesoAPI = accesoAPI;
+        this.notificacionesService = notificacionesService;
     }
 
     public List<Pruebas> getPruebas() {
@@ -141,9 +143,20 @@ public class PruebasService {
         try{
             Pruebas prueba = this.recibirPruebasEnCursoConVehiculo(idVehiculo);
             LocalDateTime now = LocalDateTime.now();
-            Double latitudAgencia = 42.50886738457441;
-            Double longitudAgencia = 1.5347139324337429;
-            return new Posiciones(now.toString(), prueba.getId_vehiculo(), latitudAgencia + latitud, longitudAgencia + longitud);
+            Coordenadas agencia = accesoAPI.getCoordenadaAgencia();
+            Double latitudAgencia = agencia.getLatitud();
+            Double longitudAgencia = agencia.getLongitud();
+
+            Posiciones posicion = new Posiciones(now.toString(), prueba.getId_vehiculo(), latitudAgencia + latitud, longitudAgencia + longitud);
+
+            //verificaion si esta en zona prohibida y mandamos notificacion
+            if(posicionesService.verificarPosicion(posicion)){
+                long telefono = prueba.getEmpleado().getTelefono_contacto();
+                notificacionesService.generarNotificacionACelular(telefono);
+
+            };
+
+            return posicion;
         } catch (NoSuchElementException e) {
             throw new RuntimeException("No se encontraron pruebas con vehiculo");
         }

@@ -25,17 +25,19 @@ public class PruebasController {
     private final InteresadosService interesadosService;
     private final EmpleadosService empleadosService;
     private final PosicionesService posicionesService;
+    private final NotificacionesService notificacionesService;
 
     @Autowired
     public PruebasController(PruebasService pruebasService, VehiculosService vehiculosService,
                              InteresadosService interesadosService, EmpleadosService empleadosService,
-                             PosicionesService posicionesService) {
+                             PosicionesService posicionesService, NotificacionesService notificacionesService) {
         this.pruebasService = pruebasService;
         this.vehiculosService = vehiculosService;
         this.interesadosService = interesadosService;
         this.empleadosService = empleadosService;
         this.posicionesService = posicionesService;
 
+        this.notificacionesService = notificacionesService;
     }
 
     @GetMapping

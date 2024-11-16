@@ -65,10 +65,10 @@ public class AccesoAPI {
             JsonNode coordenadas = jsonNode.get("zonasRestringidas");
             coordenadas.forEach(zona -> {
                 double latitudNoroeste = Double.parseDouble(zona.get("noroeste").get("lat").toString());
-                double longitudNoroeste = Double.parseDouble(zona.get("noroeste").get("lat").toString());
+                double longitudNoroeste = Double.parseDouble(zona.get("noroeste").get("lon").toString());
 
                 double latitudSureste = Double.parseDouble(zona.get("sureste").get("lat").toString());
-                double longitudSureste = Double.parseDouble(zona.get("sureste").get("lat").toString());
+                double longitudSureste = Double.parseDouble(zona.get("sureste").get("lon").toString());
 
                 Coordenadas coordenadasNoroeste = new Coordenadas(latitudNoroeste, longitudNoroeste);
                 Coordenadas coordenadasSureste = new Coordenadas(latitudSureste, longitudSureste);
