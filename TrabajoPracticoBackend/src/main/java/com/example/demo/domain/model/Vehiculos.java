@@ -4,26 +4,23 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 @Entity
 public class Vehiculos {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    @Getter
     private Long id;
     @Column(name = "PATENTE")
-    @Getter
     private String patente;
 
     //Relaciones
     //Modelos
-    @Getter
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(referencedColumnName = "id", name = "ID_MODELO")
     private Modelos modelos;
 
     @Column(name = "ANIO")
-    @Getter
     @Setter
     private Integer anio;
 

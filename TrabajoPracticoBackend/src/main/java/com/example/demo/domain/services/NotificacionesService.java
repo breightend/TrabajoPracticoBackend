@@ -38,8 +38,8 @@ public class NotificacionesService {
         return new Notificacion(texto, telefono);
     }
 
-    public void generarNotificacionACelular(long telefono){
-        String texto = "El vehiculo asignado se pasó de los limites establecidos, hagalo volver de inmediato";
+    public void generarNotificacionACelularAdvertencia(long telefono, String patenteVehiculo){
+        String texto = "El vehiculo de patente " + patenteVehiculo +   " se pasó de los limites establecidos, hagalo volver de inmediato";
         Notificacion notificacion = new Notificacion(texto, telefono);
         this.notificar(notificacion);
     }

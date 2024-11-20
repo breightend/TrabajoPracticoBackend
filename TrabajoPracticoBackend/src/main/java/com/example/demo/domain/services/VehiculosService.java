@@ -56,13 +56,14 @@ public class VehiculosService {
                 return posicionesService.getPosicionActualVehiculo(vehiculoId);
             } else {
                 long telefonoEmpleado = pruebaEnCurso.getEmpleado().getTelefono_contacto();
-                notificacionesService.generarNotificacionACelular(telefonoEmpleado);
+                String patenteVehiculo = this.findByID(vehiculoId).getPatente();
+                notificacionesService.generarNotificacionACelularAdvertencia(telefonoEmpleado, patenteVehiculo);
                 pruebaEnCurso.getInteresados().setRestringido(true);
                 interesadosService.saveInteresado(pruebaEnCurso.getInteresados());
                 return posicionesService.getPosicionActualVehiculo(vehiculoId);
             }
         } catch (NoSuchElementException e) {
-            throw e;
+            return posicionesService.getPosicionActualVehiculo(vehiculoId);
         } catch (InvalidObjectException e) {
             throw new RuntimeException(e);
         }

@@ -84,9 +84,9 @@ public class AccesoAPI {
     }
 
     //Coordenadas màximas de movimiento que el vehiculo tiene permitido.
-    public Coordenadas calcularCoordenadas(Integer radioAdmitidoKm, double latitud) {
-        double latitudGrado = radioAdmitidoKm / 111.0;
-        double longitudGrado = radioAdmitidoKm / 111.0 * Math.cos(Math.toRadians(latitud));
+    public Coordenadas calcularCoordenadas(Integer radioAvanzadoKm, double latitud) {
+        double latitudGrado = radioAvanzadoKm / 111.0;
+        double longitudGrado = radioAvanzadoKm / 111.0 * Math.cos(Math.toRadians(latitud));
         return new Coordenadas(latitudGrado, longitudGrado);
     }
 }

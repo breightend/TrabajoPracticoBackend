@@ -139,20 +139,21 @@ public class PruebasService {
         throw new NoSuchElementException("No se encontraron pruebas con vehiculo");
     }
 
-    public Posiciones AvanzarVehiculoEnPrueba(Long idVehiculo, Double latitud, Double longitud) throws NoSuchElementException {
+    public Posiciones AvanzarVehiculoEnPrueba(Long idVehiculo, Double avanceEnLatitud, Double avanceEnLongitud) throws NoSuchElementException {
         try{
             Pruebas prueba = this.recibirPruebasEnCursoConVehiculo(idVehiculo);
             LocalDateTime now = LocalDateTime.now();
             Coordenadas agencia = accesoAPI.getCoordenadaAgencia();
             Double latitudAgencia = agencia.getLatitud();
             Double longitudAgencia = agencia.getLongitud();
+//            Double latitudAvanzada
 
-            Posiciones posicion = new Posiciones(now.toString(), prueba.getId_vehiculo(), latitudAgencia + latitud, longitudAgencia + longitud);
+            Posiciones posicion = new Posiciones(now.toString(), prueba.getId_vehiculo(), latitudAgencia + avanceEnLatitud, longitudAgencia + avanceEnLongitud);
 
             //verificaion si esta en zona prohibida y mandamos notificacion
             if(posicionesService.verificarPosicion(posicion)){
                 long telefono = prueba.getEmpleado().getTelefono_contacto();
-                notificacionesService.generarNotificacionACelular(telefono);
+                notificacionesService.generarNotificacionACelularAdvertencia(telefono, prueba.getId_vehiculo().getPatente());
 
             };
 
