@@ -59,6 +59,7 @@ public class VehiculosService {
                 String patenteVehiculo = this.findByID(vehiculoId).getPatente();
                 notificacionesService.generarNotificacionACelularAdvertencia(telefonoEmpleado, patenteVehiculo);
                 pruebaEnCurso.getInteresados().setRestringido(true);
+                pruebaEnCurso.setIncidentes(true);
                 interesadosService.saveInteresado(pruebaEnCurso.getInteresados());
                 return posicionesService.getPosicionActualVehiculo(vehiculoId);
             }

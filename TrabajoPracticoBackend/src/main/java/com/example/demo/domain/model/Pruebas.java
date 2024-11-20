@@ -8,21 +8,21 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
 public class Pruebas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Atributos
     @Column(name = "ID")
     private long id;
-    @Setter
     @Column(name = "FECHA_HORA_INICIO")
     private LocalDateTime fecha_hora_inicio;            //no tendria que ser String??
-    @Setter
     @Column(name = "FECHA_HORA_FIN")
     private LocalDateTime fecha_hora_fin;
-    @Setter
     @Column(name = "COMENTARIOS")
     private String comentarios;
+    @Column(name = "INCIDENTES")
+    private boolean incidentes;
 
 
     //Relaciones
@@ -30,17 +30,14 @@ public class Pruebas {
 //    @ManyToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name = "interesados")
     @OneToOne
-    @Setter
     @JoinColumn(referencedColumnName = "ID", name = "ID_INTERESADO")
     private Interesados interesados;
     //Empleados
     @OneToOne
-    @Setter
     @JoinColumn(referencedColumnName = "LEGAJO", name = "ID_EMPLEADO")
     private Empleados empleado;
     //Prueba
     @OneToOne
-    @Setter
     @JoinColumn(referencedColumnName = "ID", name = "ID_VEHICULO")
     private Vehiculos id_vehiculo;
 
