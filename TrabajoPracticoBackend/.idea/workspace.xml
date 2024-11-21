@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="af991600-74e8-4136-8ecc-f48ea7076fb2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Gateway/src/main/java/com/TrabajoPractico/Gateway/Configuration/GWConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Controlers/ReportesControler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Repositories/PruebasRepositories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Repositories/VehiculoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Servicies/PruebasXVehiculosSerivce.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Coordenadas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Empleados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Interesados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Marcas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Modelos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Notificacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Posiciones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/PosicionesInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Pruebas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Vehiculos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/ZonasRestringidas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/TrabajoPracticoBackend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/AccesoAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/AccesoAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/NotificacionesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/NotificacionesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/AccesoAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/AccesoAPI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/NotificacionesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/NotificacionesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2ooJB8jCO5R4SZCN9sGBiZXHLGu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Prueba.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TrabajoPracticoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.pruebas.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="TrabajoPracticoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.TrabajoPracticoApplication" />
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TrabajoPracticoApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af991600-74e8-4136-8ecc-f48ea7076fb2" name="Changes" comment="" />
+      <created>1731529862324</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731529862324</updated>
+      <workItem from="1732127210719" duration="2866000" />
+      <workItem from="1732135001531" duration="3686000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
