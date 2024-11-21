@@ -107,7 +107,7 @@ public class ReportesControler {
 
         List<Pruebas> pruebasConIncidentesXEmpleado = incidentesXEmpleadoService.getPruebasConIncidentesConEmpleado(legajoEmpleado);
 
-        FileWriter fw = new FileWriter("src\\main\\resources\\Reportes\\Incidentes.txt", false);
+        FileWriter fw = new FileWriter("src\\main\\resources\\Reportes\\IncidentesXEmpleado.txt", false);
         StringBuilder sb = new StringBuilder("Archivo de pruebas con incidentes de Empleado").append("\n");
         sb.append("---------------------------------------------------------------").append("\n");
 
