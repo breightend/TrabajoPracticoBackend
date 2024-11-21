@@ -17,6 +17,7 @@ public class GWConfig {
                 .route(p -> p.path("/notificacion/**").uri(uriVehiculos))
                 .route(p -> p.path("/pruebas/**").uri(uriVehiculos))
                 .route(p -> p.path("/vehiculos/**").uri(uriVehiculos))
+                .route(p -> p.path("/reportes/**").uri(uriReportes))
                 .build();
     }
 

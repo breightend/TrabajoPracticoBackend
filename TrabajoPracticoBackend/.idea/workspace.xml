@@ -5,45 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af991600-74e8-4136-8ecc-f48ea7076fb2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Gateway/src/main/java/com/TrabajoPractico/Gateway/Configuration/GWConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Controlers/ReportesControler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Repositories/PruebasRepositories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Repositories/VehiculoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Servicies/PruebasXVehiculosSerivce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Coordenadas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Empleados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Interesados.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Marcas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Modelos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Notificacion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Posiciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/PosicionesInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Pruebas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/Vehiculos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/model/ZonasRestringidas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/TrabajoPracticoBackend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8854adfd-59fd-4474-989c-2d57162aa89f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Gateway/src/main/java/com/TrabajoPractico/Gateway/Configuration/GWConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Gateway/src/main/java/com/TrabajoPractico/Gateway/Configuration/GWConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reportes/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Reportes/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Controlers/ReportesControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Reportes/src/main/java/com/TrabajoPractico/Reportes/Controlers/ReportesControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agencia.db" beforeDir="false" afterPath="$PROJECT_DIR$/agencia.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/controlers/VehiculoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/model/Vehiculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/AccesoAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/AccesoAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/NotificacionesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/NotificacionesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/PruebasService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/domain/services/VehiculosService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/controlers/VehiculoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/model/Vehiculos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/AccesoAPI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/AccesoAPI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/NotificacionesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/NotificacionesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/PruebasService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demo/domain/services/VehiculosService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,8 +80,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -128,6 +95,7 @@
       <updated>1731529862324</updated>
       <workItem from="1732127210719" duration="2866000" />
       <workItem from="1732135001531" duration="3686000" />
+      <workItem from="1732188340692" duration="935000" />
     </task>
     <servers />
   </component>
